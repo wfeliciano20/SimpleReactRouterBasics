@@ -2,10 +2,10 @@ import React from 'react';
 import Navbar from './Navbar';
 import './HomePage.css';
 
-const HomePage = ({currentUser}) => {
+const HomePage = ({currentUser, setLoggedInUser}) => {
   return (
     <div>
-      <Navbar currentUser={currentUser} />
+      <Navbar currentUser={currentUser}  setLoggedInUser={setLoggedInUser}/>
       {currentUser.email ? <h1>Welcome {currentUser.email}</h1> : null}
       <main className="hero">
         <div className="hero-text">

@@ -6,8 +6,6 @@ import './Navbar.css';
 import {Link} from 'react-router-dom';
 
 const Navbar = ({currentUser, setLoggedInUser}) => {
-  console.log(typeof currentUser);
-  console.log(typeof setLoggedInUser);
   const navigate = useNavigate();
 
   const handleSignup = () => {
