@@ -1,27 +1,36 @@
 import React from 'react';
 // import FaSearch icon 
 import {FaSearch} from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+/* import useNavigate hook so later we can send the users to either the sign up page the login page or the home
+  page
+  import Link to be able to have the Home and about links redirect to the correct pages
+*/ 
+import { useNavigate, Link } from 'react-router-dom';
 import './Navbar.css';
-import {Link} from 'react-router-dom';
 
+
+/*  Receives two props the currentUser which is the currentLoggedInUser if there is one, and a way to reset the
+    currentLoggedInUser if the logout button is clicked
+*/
 const Navbar = ({currentUser, setLoggedInUser}) => {
   const navigate = useNavigate();
 
+  // Redirects the user to the sign up page if the user clicks the sign up button.
   const handleSignup = () => {
     navigate('/signup');
   }
 
+  // Redirects the user to the login page if the user clicks the login button.
   const handleLogin = () => {
     navigate('/login');
   }
 
+  // Resets the current logged in user and redirects to the home page when the user clicks the logout button.
   const handleLogOut = () => {
-    console.log(typeof setLoggedInUser)
-    console.log('log out');
     setLoggedInUser({});
     navigate("/");
   }
+
   return <div className="navbar">
     <div className="links">
       <ul className='list'>
