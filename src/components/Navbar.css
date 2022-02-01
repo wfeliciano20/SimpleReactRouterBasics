@@ -1,0 +1,65 @@
+.navbar {
+    height: 5.3rem;
+    background-color: yellow;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar:hover {
+    background-color: white;
+    color: black
+}
+
+.logo {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: black;
+}
+
+.list .link {
+    margin-right: .5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: .8rem;
+    margin-right: .5rem;
+}
+
+.btn {
+    padding: .5rem .9rem .5rem .9rem;
+    margin: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-full {
+    background-color: aquamarine;
+    color: black;
+    border: none
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid black;
+}
