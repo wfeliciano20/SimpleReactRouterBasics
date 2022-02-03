@@ -67,12 +67,16 @@ const LogIn = ({login, currentUser, setLoggedInUser}) => {
       <div className="login-container">
         <div className="form-container">
                 <form onSubmit={handleSubmit(handleSubmitForm)} className="form">
-                  <label className="label" htmlFor="email">Email:</label>
-                  <input className="input" type="email" name="email" { ...register('email') }  />
-                  {errors?.email ? <p className="error">{errors.email.message}</p>:null}
-                  <label className="label" htmlFor="password">Password:</label>
-                  <input className="input" type="password" name="password" { ...register('password') }  />
-                  {errors?.password ? <p className="error">{errors.password.message}</p>:null}
+                  <div className="input-container">
+                    <label className="label" htmlFor="email">Email:</label>
+                    <input className="input" type="email" name="email" { ...register('email') }  />
+                    {errors?.email ? <p className="error">{errors.email.message}</p>:null}
+                  </div>
+                  <div className="input-container">
+                    <label className="label" htmlFor="password">Password:</label>
+                    <input className="input" type="password" name="password" { ...register('password') }  />
+                    {errors?.password ? <p className="error">{errors.password.message}</p>:null}
+                  </div>
                   <input className="submit" type="submit" value="Log in" />
                 </form>
         </div>

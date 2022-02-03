@@ -83,12 +83,18 @@ const SignUp = ({ signup,currentUser, setLoggedInUser }) => {
       <div className="signup-container">
         <div className="form-container">
           <form onSubmit={handleSubmit(handleSubmitForm)} className="form">
-            <label className="label" htmlFor="email">Email:</label>
-            <input className="input" type="email" name="email" {...register('email')}  />
-            <label className="label" htmlFor="password">Password:</label>
-            <input className="input" type="password" name="password" {...register('password')} />  
-            <label className="label" htmlFor="confirmPassword">Confirm Password:</label>
-            <input className="input" type="password" name="confirmPassword" {...register('confirmPassword')} />
+            <div className="input-container">
+              <label className="label" htmlFor="email">Email:</label>
+              <input className="input" type="email" name="email" {...register('email')}  />
+            </div>
+            <div className="input-container">
+              <label className="label" htmlFor="password">Password:</label>
+              <input className="input" type="password" name="password" {...register('password')} />  
+            </div>
+            <div className="input-container">
+              <label className="label" htmlFor="confirmPassword">Confirm Password:</label>
+              <input className="input" type="password" name="confirmPassword" {...register('confirmPassword')} />
+            </div>
             <input className="submit" type="submit" value="Sign up" />
           </form>
         </div>
