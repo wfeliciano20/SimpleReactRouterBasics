@@ -86,14 +86,18 @@ const SignUp = ({ signup,currentUser, setLoggedInUser }) => {
             <div className="input-container">
               <label className="label" htmlFor="email">Email:</label>
               <input className="input" type="email" name="email" {...register('email')}  />
+              {errors?.email ? <p className="error">{errors.email.message}</p>:null}
             </div>
             <div className="input-container">
               <label className="label" htmlFor="password">Password:</label>
               <input className="input" type="password" name="password" {...register('password')} />  
+              {errors?.password ? <p className="error">{errors.password.message}</p>:null}
+            
             </div>
             <div className="input-container">
               <label className="label" htmlFor="confirmPassword">Confirm Password:</label>
               <input className="input" type="password" name="confirmPassword" {...register('confirmPassword')} />
+              {errors?.confirmPassword ? <p className="error">{errors.confirmPassword.message}</p>:null}
             </div>
             <input className="submit" type="submit" value="Sign up" />
           </form>
