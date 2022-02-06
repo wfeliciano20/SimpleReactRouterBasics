@@ -104,8 +104,6 @@ const SignUp = ({ signup,currentUser, setLoggedInUser }) => {
         </div>
       </div>
     </div>
-    
-    
   );
 };
 

@@ -88,20 +88,3 @@ const LogIn = ({login, currentUser, setLoggedInUser}) => {
 
 export default LogIn;
 
-
-/*
-  <div>
-      <Navbar currentUser={currentUser} setLoggedInUser={setLoggedInUser} />
-      <div className="login-container">
-        <div className="form-container">
-                <form onSubmit={handleSubmit} className="form">
-                  <label className="label" htmlFor="email">Email:</label>
-                  <input className="input" type="email" name="email" value={email} onChange={e => setEmail(e.target.value)}  />
-                  <label className="label" htmlFor="password">Password:</label>
-                  <input className="input" type="password" name="password" value={password} onChange={e => setPassword(e.target.value)}  />
-                  <input className="submit" type="submit" value="Log in" />
-                </form>
-        </div>
-      </div>
-    </div>
-*/
